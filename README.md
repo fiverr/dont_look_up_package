@@ -13,7 +13,7 @@ Stop requirejs' search path from looking higher than a given directory. This beh
 describe('my-tests', () => {
     require('dont-look-up')(__dirname);
 
-    it('should not traverse beyond this directory', () => { ... });
+    it('Should only traverse up to current root directory', () => { ... });
 });
 ```
 
