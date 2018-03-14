@@ -14,12 +14,13 @@
   },
   "plugins": [],
   "extends": [
-    "eslint:recommended"
+    "@fiverr/eslint-config-fiverr/rules/base",
+    "@fiverr/eslint-config-fiverr/rules/es6"
   ],
   "rules": {},
   "overrides": [
     {
-      "files": [ "**/test.js", "**/spec.js" ],
+      "files": [ "spec*", "**/spec*" ],
       "env": {
         "mocha": true
       },

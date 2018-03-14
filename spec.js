@@ -7,7 +7,7 @@ const {
     parent,
     child,
     parent_limited,
-    child_limited,
+    child_limited
 } = require(PACKAGE_ROOT);
 
 describe('dont-look-up', () => {

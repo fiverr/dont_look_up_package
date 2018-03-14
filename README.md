@@ -1,4 +1,4 @@
-# don't look up
+# don't look up [![](https://circleci.com/gh/fiverr/dont_look_up_package.svg?style=svg)](https://circleci.com/gh/fiverr/dont_look_up_package)
 
 [![NPM](https://nodei.co/npm/dont-look-up.png)](https://www.npmjs.com/package/dont-look-up)
 

@@ -3,7 +3,7 @@ const PACKAGE_ROOT = './spec/nested';
 
 const {
     parent,
-    child,
+    child
 } = require(PACKAGE_ROOT);
 
 describe('dont-look-up from the outside', () => {

@@ -17,5 +17,5 @@ module.exports = {
     child_limited(string) {
         require('../../')(__dirname);
         return require(CHILD_MODULE)(string);
-    },
+    }
 };
