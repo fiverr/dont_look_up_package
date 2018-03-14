@@ -1,0 +1,18 @@
+defaults: &defaults
+  working_directory: ~/app
+
+version: 2
+jobs:
+  nothing:
+    <<: *defaults
+    steps:
+      - run:
+          name: echo nothing
+          command: echo "nothing"
+
+workflows:
+  version: 2
+  ci-cd:
+    jobs:
+      - nothing
+
