@@ -1,4 +1,6 @@
 .DS_Store
 *.log
 node_modules
+!spec/node_modules
+!spec/nested/node_modules
 package-lock.json
