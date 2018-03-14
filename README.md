@@ -2,7 +2,6 @@
 
 [![NPM](https://nodei.co/npm/dont-look-up.png)](https://www.npmjs.com/package/dont-look-up)
 
-
 ## Stop requirejs from traversing at a certain point
 
 > Whatever you do — don't look up
@@ -28,11 +27,15 @@ Consider the following tree
     │   ├── package.json
     │   └── node_modules
     │       └── child-level-module
+    ├── index.js
+    ├── package.json
     └── node_modules
         └── parent-level-module
 ```
 
-#### package/index.js
+| package/index.js
+| ---
+
 ```js
 require('parent-level-module'); // works
 require('child-level-module'); // works
