@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/fiverr/dont_look_up_package.git"
   },
+  "homepage": "https://fiverr.github.io/dont_look_up_package/",
   "engines": {
     "node": ">=6.5.0"
   },

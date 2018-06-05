@@ -1,7 +1,7 @@
 defaults: &defaults
   working_directory: ~/app
   docker:
-    - image: circleci/node:8.9.0
+    - image: circleci/node:8
 
 version: 2
 jobs:
@@ -49,6 +49,24 @@ jobs:
       - run:
           name: Publish to NPM
           command: npx published
+  docs:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: build-cache-{{ .Revision }}
+      - run:
+          name: Get the docs template
+          command: curl https://raw.githubusercontent.com/omrilotan/mono/master/packages/markt/templates/plain.html > ./template.html
+      - run:
+          name: Create a webpage from the readme
+          command: npx markt --source README.md --destination ./gh-pages/index.html --template ./template.html --title dont-look-up
+      - run:
+          name: Set git user
+          command: curl ci-cd.net/v1/git/user | sh -s a1vy a01101100vy@gmail.com
+      - run:
+          name: Push gh-pages
+          command: curl ci-cd.net/v1/gh/pages | sh -s gh-pages/.
 
 workflows:
   version: 2
@@ -61,6 +79,13 @@ workflows:
       - publish:
           requires:
             - test
+      - docs:
+          requires:
+            - publish
+          filters:
+            branches:
+              only:
+                - master
 
 experimental:
   notify:
