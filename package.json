@@ -2,6 +2,13 @@
   "name": "dont-look-up",
   "version": "1.0.0",
   "description": "Stop requirejs from traversing at a certain point",
+  "keywords": [
+    "requirejs",
+    "testing",
+    "modules",
+    "monorepo",
+    "mono-repo"
+  ],
   "author": "Fiverr SRE",
   "license": "MIT",
   "repository": {
